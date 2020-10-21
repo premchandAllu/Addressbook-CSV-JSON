@@ -7,11 +7,11 @@ public class Contact {
 	private String address;
 	private String city;
 	private String state;
-	private String zip;
+	private int zip;
 	private String phone;
 	private String email;
 	
-	public Contact(String firstName, String lastName, String address, String city, String state, String zip, String phone,
+	public Contact(String firstName, String lastName, String address, String city, String state, int zip,String phone,
 			String email) {
 		super();
 		this.firstName = firstName;
@@ -24,6 +24,7 @@ public class Contact {
 		this.email = email;
 	
 	}
+
 
 	public String getFirstName() {
 		return firstName;
@@ -65,11 +66,11 @@ public class Contact {
 		this.state = state;
 	}
 
-	public String getZip() {
+	public int getZip() {
 		return zip;
 	}
 
-	public void setZip(String zip) {
+	public void setZip(int zip) {
 		this.zip = zip;
 	}
 
@@ -90,8 +91,8 @@ public class Contact {
 	}
 
 	public String toString() {
-		return firstName + " " + lastName + " " + address + " " + city + " " + state + " " + zip + " " + phone + " "
-				+ email;
+		return firstName + " " + lastName + " " + address + " "
+	     + city + " " + state + " " + zip + " " + phone + " "+ email;
 	}
 	
 }

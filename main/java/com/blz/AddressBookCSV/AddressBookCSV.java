@@ -31,10 +31,9 @@ public class AddressBookCSV {
 			StatefulBeanToCsvBuilder<Contact> builder = new StatefulBeanToCsvBuilder<>(writer);
 			StatefulBeanToCsv<Contact> beanWriter = builder.build();
 			List<Contact> personsList = new ArrayList<>();
-			personsList.add(new Contact("Premchand", "Allu", "Tuni", "East Godavari", "AP","533401","7660078866",
+			personsList.add(new Contact("Premchand", "Allu", "Tuni", "East Godavari", "AP",533401,"7660078866",
 					"prem@gmail.com"));
-			personsList.add(new Contact("Bhanuchand", "Allu", "Madhura Nagar", "Hyderabad", "Telangana","500009","9494782626",
-					"bhanu@gmail.com"));
+			personsList.add(new Contact("Bhanuchand", "Allu", "Madhura Nagar", "Hyderabad", "Telangana",500009, "9494782626","bhanu@gmail.com"));
 			beanWriter.write(personsList);
 			writer.close();
 		} catch (IOException e) {
@@ -57,7 +56,7 @@ public class AddressBookCSV {
 				System.out.println("email - " + nextRecord[7]);
 			}
 		}
-		catch (Exception e) {
+		catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
